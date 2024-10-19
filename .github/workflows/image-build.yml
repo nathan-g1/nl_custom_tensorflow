@@ -20,9 +20,9 @@ jobs:
           id: build-docker-image
           run: |
             ls -la 
-            docker build . -f Dockerfile -t nathan-g1/nl_custom_tensorflow:latest
+            docker build . -f Dockerfile -t nathangl/nl_custom_tensorflow:latest
         - name: push the docker image
           id: push-docker-image
           run: |
-            docker tag nl_custom_tensorflow ${{secrets.DOCKER_USERNAME}}/nathan-g1/nl_custom_tensorflow:latest
-            docker push ${{secrets.DOCKER_USERNAME}}/nathan-g1/nl_custom_tensorflow:latest
+            docker tag nl_custom_tensorflow nathangl/nl_custom_tensorflow:latest
+            docker push nathangl/nl_custom_tensorflow:latest
