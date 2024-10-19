@@ -24,5 +24,5 @@ jobs:
         - name: push the docker image
           id: push-docker-image
           run: |
-            docker tag mmdl-image nathan-g1/nl_custom_tensorflow:latest
+            docker tag latest nathan-g1/nl_custom_tensorflow:latest
             docker push nathan-g1/nl_custom_tensorflow:latest
