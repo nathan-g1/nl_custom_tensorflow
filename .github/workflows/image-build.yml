@@ -23,4 +23,7 @@ jobs:
             docker build . -f Dockerfile -t nathan-g1/nl_custom_tensorflow:latest
         - name: push the docker image
           id: push-docker-image
-          run: docker push nathangl/nl_custom_tensorflow:latest
+          run: |
+            docker login -u $username -p $password
+            docker tag mmdl-image nathan-g1/nl_custom_tensorflow:latest
+            docker push nathan-g1/nl_custom_tensorflow:latest
