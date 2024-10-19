@@ -1,5 +1,5 @@
 # Use the NVIDIA TensorFlow base image
-FROM nvcr.io/nvidia/tensorflow:24.09-tf2-py3
+FROM python:3.10-slim
 
 # Set the working directory
 WORKDIR /workspace
